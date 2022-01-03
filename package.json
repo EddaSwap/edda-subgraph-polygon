@@ -1,0 +1,23 @@
+{
+  "name": "eddaswap-subgraph-polygon",
+  "version": "1.0.0",
+  "repository": "https://github.com/Eddaswap/edda-subgraph-polygon",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "codegen": "graph codegen --output-dir src/types/",
+    "build": "graph build",
+    "hosted-auth": "graph auth --product hosted-service $SUBGRAPH_AUTH_TOKEN",
+    "hosted-init": "graph init --product hosted-service akkien/eddaswap-polygon",
+    "hosted-deploy": "graph deploy --product hosted-service akkien/eddaswap-polygon"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.21.1",
+    "@graphprotocol/graph-ts": "^0.20.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.2"
+  }
+}
